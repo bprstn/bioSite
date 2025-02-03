@@ -1,2 +1,6 @@
-# bioSite
-My bioSite project for CSD 340 Web Development
+# CSD 340 Web Development with HTML and CSS
+
+## Contributors
+- Nathan Braun
+- Brian Preston
+
