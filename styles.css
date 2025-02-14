@@ -8,11 +8,12 @@ body {
     padding: 0;
     background-color: #FADADD;  /* Light Pink Background */
     color: #000000; /* Black Text */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 /* Header */
 header {
-    background-color: #D4AF37; /* Gold */
+    background: linear-gradient(45deg, #D4AF37, #FADADD); /* Gold to Light Pink Gradient */
     color: black; /* Black text for contrast */
     text-align: center;
     padding: 20px;
@@ -39,10 +40,30 @@ nav ul li a {
     color: black; /* Black text */
     text-decoration: none;
     font-weight: bold;
+    position: relative;
 }
 
 nav ul li a:hover {
     color: #FADADD; /* Light pink on hover */
+}
+
+/* Hover Effect for Links */
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #D4AF37;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Main Content */
@@ -68,28 +89,74 @@ h1, h2, h3 {
 
 .image-gallery figure {
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .image-gallery img {
     width: 100%;  /* Full width on mobile */
-    max-width: 350px;  /* Slightly larger images */
+    max-width: 400px;  /* Medium size */
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 10px;  /* Optional: Rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Captions Appear on Hover */
+.image-gallery figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-gallery figure:hover figcaption {
+    opacity: 1;
 }
 
 /* Responsive Image Sizing */
 @media (min-width: 768px) {
     .image-gallery img {
-        width: 45%;  /* Medium size on tablets */
+        width: 50%;  /* Medium size on tablets */
     }
 }
 
 @media (min-width: 1024px) {
     .image-gallery img {
-        width: 30%;  /* Smaller on desktops */
+        width: 35%;  /* Smaller on desktops */
     }
+}
+
+/* Meet Chloe Section */
+.meet-chloe {
+    border: 3px solid #D4AF37;
+    padding: 15px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+/* Quotes Section */
+.quotes {
+    text-align: center;
+    font-style: italic;
+    color: #D4AF37;
+    font-size: 1.2em;
+    padding: 10px;
+    border-top: 2px solid #D4AF37;
+    background: #FADADD;
 }
 
 /* Footer */
@@ -99,10 +166,10 @@ footer {
     text-align: center;
     padding: 10px;
     width: 100%;
-    position: relative;  /* Fixed my footer overlap issue */
+    position: relative;  /* Fixing my footer overlap issue */
     bottom: 0;
     min-height: 50px;
-    clear: both;  /* Prevents floating elements from affecting footer */
+    clear: both;  /* Prevents my floating elements from affecting footer */
 }
 
 footer a {
