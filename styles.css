@@ -71,7 +71,7 @@ h1, h2, h3 {
 
 .image-gallery img {
     width: 100%;  /* Full width on mobile */
-    max-width: 300px;  /* Set a max width */
+    max-width: 400px;  /* Increased image size */
     height: auto;
     display: block;
     margin: 0 auto;
@@ -81,13 +81,15 @@ h1, h2, h3 {
 /* Responsive Image Sizing */
 @media (min-width: 768px) {
     .image-gallery img {
-        width: 40%;  /* Medium size on tablets */
+        width: 50%;  /* Bigger on tablets */
+        max-width: 500px;  /* Increased max size */
     }
 }
 
 @media (min-width: 1024px) {
     .image-gallery img {
-        width: 25%;  /* Smaller on desktops */
+        width: 40%;  /* Bigger on desktops */
+        max-width: 600px;  /* Increased max size */
     }
 }
 
@@ -110,4 +112,5 @@ footer a {
 footer a:hover {
     color: #FADADD; /* Light pink on hover */
 }
+
 
