@@ -1,6 +1,8 @@
-<!-- Name: Brian Preston -->
-<!-- Class: CSD 340 - Web Development with HTML and CSS -->
-<!-- Assignment: bioSite - About Page -->
+<!-- 
+    Name: Brian Preston
+    Class: CSD 340 - Web Development with HTML and CSS
+    Assignment: bioSite - About Page
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,26 +11,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Chloe</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styling for interview section */
+        .interview-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        .interview-container h2 {
+            text-align: center;
+            color: #6A0DAD; /* Purple */
+        }
+        .question {
+            font-weight: bold;
+            color: #6A0DAD; /* Purple */
+        }
+        .answer {
+            color: black;
+            margin-bottom: 15px;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>About Chloe</h1>
+        <h1>Meet Chloe</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Who Is Chloe?</h2>
-        <p>This is Chloe, She is my best friend. We started as co-workers a few years ago within the beauty industry, and both worked our way up to becoming executives with diverse beauty lines. We have built a fantastic friendship.</p>
+        <div class="image-container">
+            <img src="images/chloe_about.jpg" alt="Chloe's Portrait">
+            <p>This is Chloe, my best friend.</p>
+        </div>
+
+        <section class="interview-container">
+            <h2>Exclusive Interview with Chloe</h2>
+            
+            <p><span class="question">1. What’s your favorite thing to do on weekends?</span></p>
+            <p class="answer">I love exploring new restaurants and going to brunch with friends!</p>
+
+            <p><span class="question">2. If you could travel anywhere in the world, where would you go?</span></p>
+            <p class="answer">Definitely Greece! I love the beaches, food, and history.</p>
+
+            <p><span class="question">3. What’s your go-to coffee order?</span></p>
+            <p class="answer">Carmel Cappuccino with oat milk. YUM</p>
+
+            <p><span class="question">4. What’s one fashion item you can’t live without?</span></p>
+            <p class="answer">My favorite designer feather sandals.</p>
+
+            <p><span class="question">5. What’s your favorite type of food?</span></p>
+            <p class="answer">Mediterranean food. I just love all the flavors.</p>
+
+            <p><span class="question">6. What’s your biggest pet peeve?</span></p>
+            <p class="answer">Slow walkers or when Brian stops wallking to text.</p>
+
+            <p><span class="question">7. What’s a hobby you’ve always wanted to try?</span></p>
+            <p class="answer">Trapeze! It just looks so fun!</p>
+
+            <p><span class="question">8. If you could have dinner with any celebrity, who would it be?</span></p>
+            <p class="answer">Brtiney Spears. Her music raised me</p>
+
+            <p><span class="question">9. What’s your dream job?</span></p>
+            <p class="answer">Owning my own boutique! I love fashion and styling.</p>
+
+            <p><span class="question">10. What’s one piece of advice you live by?</span></p>
+            <p class="answer">“My mom said smart people learn from other's mistakes, ordinary people learn on their own, and stupid people never learn. Haha, it's just something I've always kept in mind growing up.</p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Brian Preston</p>
+        <p>&copy; 2025 Brian Preston | <a href="contact.html">Contact Me</a></p>
     </footer>
+
 </body>
 </html>
+

@@ -1,6 +1,8 @@
-<!-- Name: Brian Preston -->
-<!-- Class: CSD 340 - Web Development with HTML and CSS -->
-<!-- Assignment: bioSite - Hobbies Page -->
+<!-- 
+    Name: Brian Preston
+    Class: CSD 340 - Web Development with HTML and CSS
+    Assignment: bioSite - Hobbies Page
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,26 +11,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chloe's Hobbies</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styling for hobbies section */
+        .hobbies-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .hobbies-container h2 {
+            color: #6A0DAD; /* Purple */
+        }
+        .hobbies-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-gallery figure {
+            text-align: center;
+            position: relative;
+        }
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Figcaption Styling */
+        .image-gallery figcaption {
+            font-style: italic;
+            font-size: 0.9em;
+            margin-top: 8px;
+            color: #6A0DAD; /* Purple */
+            transition: 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        /* Hover Effect: Make the text more visible */
+        .image-gallery figure:hover figcaption {
+            color: #4B0082; /* Darker purple so it's more readable */
+            background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>My Hobbies</h1>
+        <h1>Chloe's Hobbies</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Things my friend Chloe loves doing</h2>
-        <p>Chloe LOVES to cook and venture out to new restaurants. Also, being a fashion major, she is always on the hunt for the newest styles.</p>
+    <main class="hobbies-container">
+        <h2>Chloe’s Passion for Food & Fashion</h2>
+
+        <p class="hobbies-text">
+            Chloe has a love for both **exploring new restaurants** and **cooking gourmet meals** at home.  
+            Being her best friend means I'm always tagging along on culinary adventures to places I’d  
+            never have discovered on my own. Many of these restaurants are so exclusive that  
+            it takes **months** just to secure a reservation!  
+            Thanks to Chloe, I’ve fallen in love with incredible dining experiences.  
+        </p>
+
+        <p class="hobbies-text">
+            But Chloe isn’t just a foodie—she’s also an **amazing cook**.  
+            She loves trying out new recipes and preparing extravagant meals for her friends  
+            and her husband, Andrew. One thing she’s absolutely known for?  
+            **Edible glitter.** If she can add sparkle to a dish, she will!  
+        </p>
+
+        <p class="hobbies-text">
+            Beyond food, Chloe has an impeccable sense of **style**—**classy, elegant, and always on point.**  
+            Whether she's dressed up for a night out or styling casual looks, she does everything with grace and  
+            confidence.  
+        </p>
+
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <!-- Food Images -->
+            <figure>
+                <img src="images/food1.jpg" alt="Chloe's homemade dish">
+                <figcaption>One of Chloe’s delicious home-cooked meals!</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/food2.jpg" alt="Plated gourmet dish">
+                <figcaption>Another beautifully plated dish by Chloe.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/food3.jpg" alt="Dessert with edible glitter">
+                <figcaption>Yes, even soup and bread get the edible glitter treatment!</figcaption>
+            </figure>
+
+            <!-- Chloe's Fashion Images -->
+            <figure>
+                <img src="images/chloe1.jpg" alt="Chloe looking stylish">
+                <figcaption>Chloe always looks effortlessly chic.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/chloe2.jpg" alt="Chloe out for dinner">
+                <figcaption>Chloe enjoying a night out at one of her favorite restaurants.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/chloe3.jpg" alt="Chloe at a fashion event">
+                <figcaption>Her sense of style is timeless and sophisticated.</figcaption>
+            </figure>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Brian Preston</p>
+        <p>&copy; 2025 Brian Preston | <a href="contact.html">Contact Me</a></p>
     </footer>
+
 </body>
 </html>
