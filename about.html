@@ -21,16 +21,18 @@
         }
         .interview-container h2 {
             text-align: center;
-            color: #6A0DAD; /* Purple */
+            color: #8E44AD; /* Purple */
         }
         .question {
             font-weight: bold;
-            color: #6A0DAD; /* Purple */
+            color: #8E44AD; /* Purple */
         }
         .answer {
             color: black;
             margin-bottom: 15px;
         }
+
+        /* Image Styling with Glow Effect */
         .image-container {
             text-align: center;
             margin-top: 20px;
@@ -39,6 +41,11 @@
             width: 100%;
             max-width: 400px;
             border-radius: 10px;
+            transition: 0.5s ease-in-out;
+        }
+        .image-container img:hover {
+            box-shadow: 0px 0px 15px 5px rgba(142, 68, 173, 0.7); /* Purple Glow */
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -71,7 +78,7 @@
             <p class="answer">Definitely Greece! I love the beaches, food, and history.</p>
 
             <p><span class="question">3. What’s your go-to coffee order?</span></p>
-            <p class="answer">Carmel Cappuccino with oat milk. YUM</p>
+            <p class="answer">Caramel Cappuccino with oat milk. YUM!</p>
 
             <p><span class="question">4. What’s one fashion item you can’t live without?</span></p>
             <p class="answer">My favorite designer feather sandals.</p>
@@ -80,19 +87,19 @@
             <p class="answer">Mediterranean food. I just love all the flavors.</p>
 
             <p><span class="question">6. What’s your biggest pet peeve?</span></p>
-            <p class="answer">Slow walkers or when Brian stops wallking to text.</p>
+            <p class="answer">Slow walkers or when Brian stops walking to text.</p>
 
             <p><span class="question">7. What’s a hobby you’ve always wanted to try?</span></p>
             <p class="answer">Trapeze! It just looks so fun!</p>
 
             <p><span class="question">8. If you could have dinner with any celebrity, who would it be?</span></p>
-            <p class="answer">Brtiney Spears. Her music raised me</p>
+            <p class="answer">Britney Spears. Her music raised me!</p>
 
             <p><span class="question">9. What’s your dream job?</span></p>
             <p class="answer">Owning my own boutique! I love fashion and styling.</p>
 
             <p><span class="question">10. What’s one piece of advice you live by?</span></p>
-            <p class="answer">“My mom said smart people learn from other's mistakes, ordinary people learn on their own, and stupid people never learn. Haha, it's just something I've always kept in mind growing up.</p>
+            <p class="answer">“My mom said smart people learn from other's mistakes, ordinary people learn on their own, and stupid people never learn.” Haha, it's something I've always kept in mind growing up.</p>
         </section>
     </main>
 
@@ -102,4 +109,5 @@
 
 </body>
 </html>
+
 

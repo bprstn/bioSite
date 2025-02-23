@@ -6,22 +6,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FADADD;  /* Light Pink Background */
-    color: #000000; /* Black Text */
-    scroll-behavior: smooth; /* Smooth scrolling effect */
+    background-color: #FADADD; /* Light Pink */
+    color: #000000;
 }
 
-/* Header */
+/* Header - Adjusted gradient with more gold */
 header {
-    background: linear-gradient(45deg, #D4AF37, #FADADD); /* Gold to Light Pink Gradient */
-    color: black; /* Black text for contrast */
+    background: linear-gradient(to bottom, #D4AF37, #6A0DAD 70%);
+    color: black;
     text-align: center;
     padding: 20px;
 }
 
 /* Navigation */
 nav {
-    background-color: #D4AF37; /* Gold */
+    background-color: #6A0DAD; /* Deep Purple */
     padding: 10px;
     text-align: center;
 }
@@ -37,33 +36,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black; /* Black text */
+    color: white; /* White text for contrast */
     text-decoration: none;
     font-weight: bold;
-    position: relative;
 }
 
 nav ul li a:hover {
-    color: #FADADD; /* Light pink on hover */
-}
-
-/* Hover Effect for Links */
-a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #D4AF37;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+    color: #FADADD; /* Light Pink on hover */
 }
 
 /* Main Content */
@@ -75,7 +54,7 @@ main {
 
 /* Headings */
 h1, h2, h3 {
-    color: #D4AF37; /* Gold */
+    color: #6A0DAD; /* Purple */
 }
 
 /* Image Gallery */
@@ -83,102 +62,77 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     margin: 20px;
 }
 
 .image-gallery figure {
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .image-gallery img {
-    width: 100%;  /* Full width on mobile */
-    max-width: 400px;  /* Medium size */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;  /* Optional: Rounded corners */
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-}
-
-/* Captions Appear on Hover */
-.image-gallery figcaption {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
     width: 100%;
-    padding: 10px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    max-width: 280px; /* Adjusted for smaller images */
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
 }
 
-.image-gallery figure:hover figcaption {
-    opacity: 1;
+/* Image Glow Effect */
+.image-gallery img:hover {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.8); /* Gold glow */
 }
 
-/* Responsive Image Sizing */
-@media (min-width: 768px) {
-    .image-gallery img {
-        width: 50%;  /* Medium size on tablets */
-    }
-}
-
-@media (min-width: 1024px) {
-    .image-gallery img {
-        width: 35%;  /* Smaller on desktops */
-    }
-}
-
-/* Meet Chloe Section */
-.meet-chloe {
-    border: 3px solid #D4AF37;
-    padding: 15px;
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-}
-
-/* Quotes Section */
-.quotes {
-    text-align: center;
+/* Figcaption Styling */
+.image-gallery figcaption {
     font-style: italic;
-    color: #D4AF37;
-    font-size: 1.2em;
-    padding: 10px;
-    border-top: 2px solid #D4AF37;
-    background: #FADADD;
+    font-size: 1em;
+    margin-top: 8px;
+    color: #6A0DAD; /* Purple */
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Hover Effect: Make the text more visible */
+.image-gallery figure:hover figcaption {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* About Page - Chloe's Image Glow */
+.about-container img {
+    transition: 0.3s ease-in-out;
+}
+
+.about-container img:hover {
+    filter: drop-shadow(0 0 10px #D4AF37); /* Gold sparkle effect */
 }
 
 /* Footer */
 footer {
-    background-color: #D4AF37; /* Gold */
-    color: black; /* Black text */
+    background-color: #6A0DAD; /* Deep Purple */
+    color: white;
     text-align: center;
     padding: 10px;
     width: 100%;
-    position: relative;  /* Fixing my footer overlap issue */
+    position: relative;
     bottom: 0;
     min-height: 50px;
-    clear: both;  /* Prevents my floating elements from affecting footer */
+    clear: both;
 }
 
 footer a {
-    color: black; /* Black text */
+    color: white;
     text-decoration: none;
 }
 
 footer a:hover {
     color: #FADADD; /* Light pink on hover */
 }
+
+
 
 

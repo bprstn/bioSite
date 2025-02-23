@@ -20,7 +20,7 @@
             text-align: center;
         }
         .hobbies-container h2 {
-            color: #6A0DAD; /* Purple */
+            color: #8E44AD; /* Purple */
         }
         .hobbies-text {
             font-size: 1.1em;
@@ -43,29 +43,29 @@
         }
         .image-gallery img {
             width: 100%;
-            max-width: 300px;
+            max-width: 320px;
             height: auto;
             border-radius: 10px;
             transition: 0.3s ease-in-out;
         }
 
-        /* Figcaption Styling */
-        .image-gallery figcaption {
-            font-style: italic;
-            font-size: 0.9em;
-            margin-top: 8px;
-            color: #6A0DAD; /* Purple */
-            transition: 0.3s ease-in-out;
-            font-weight: bold;
+        /* Hover Effect: Soft Glow & Readable Caption */
+        .image-gallery figure:hover img {
+            box-shadow: 0px 0px 12px 4px rgba(142, 68, 173, 0.6); /* Purple Glow */
+            transform: scale(1.05);
         }
 
-        /* Hover Effect: Make the text more visible */
-        .image-gallery figure:hover figcaption {
-            color: #4B0082; /* Darker purple so it's more readable */
-            background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+        .image-gallery figcaption {
+            font-style: italic;
+            font-size: 0.95em;
+            color: #4B0082; /* Darker Purple */
+            background-color: rgba(255, 255, 255, 0.85); /* Light background for contrast */
             padding: 5px;
             border-radius: 5px;
+            display: inline-block;
+            transition: 0.3s ease-in-out;
         }
+
     </style>
 </head>
 <body>
@@ -147,3 +147,4 @@
 
 </body>
 </html>
+
